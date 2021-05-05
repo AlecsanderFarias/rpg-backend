@@ -5,7 +5,6 @@ import User from '../../../models/User';
 const create = async (req: Request, res: Response) => {
   try {
 
-
     const user = await User.create({
       name: 'Alecsander Farias',
       email: 'alecs@devfarias.com',
@@ -14,7 +13,7 @@ const create = async (req: Request, res: Response) => {
     });
 
 
-    return res.status(201).json({ teste: true });
+    return res.status(201).json(user);
   } catch (error) {
 
     console.error('deu merda');
