@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import paginate from '../config/mongoose-paginate';
+import UserInterface from '../@types/User';
 
 const { Schema } = mongoose;
 
@@ -22,4 +23,4 @@ const UserSchema = new Schema(
 
 UserSchema.plugin(paginate);
 
-export default mongoose.model('User', UserSchema);
+export default mongoose.model<UserInterface>('User', UserSchema);

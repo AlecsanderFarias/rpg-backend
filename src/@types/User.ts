@@ -1,5 +1,5 @@
-
-interface User {
+import { Document } from 'mongoose';
+interface User extends Document {
   _id?: String,
   email: String,
   birth: Date,
@@ -9,8 +9,5 @@ interface User {
   role?: String,
   deleted?: Boolean,
 }
-
-
-
 
 export default User;
